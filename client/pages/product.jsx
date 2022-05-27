@@ -10,14 +10,16 @@ const Product = () => {
 		<>
 			<div className="product">
 				<Header />
-				<ProductMain />
-				<ProductAdder />
-				<ProductDescription />
-				<ProductSpecs />
+				<main>
+					<ProductMain />
+					<ProductAdder />
+					<ProductDescription />
+					<ProductSpecs />
+				</main>
 				<Footer />
 			</div>
 		</>
 	);
-}
+};
 
 export default Product;

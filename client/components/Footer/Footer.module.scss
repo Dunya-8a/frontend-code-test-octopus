@@ -1,0 +1,12 @@
+@use "../../styles/partials/breakpoints" as *;
+
+.Footer {
+	background-color: var(--hemocyanin);
+
+	&__text {
+		font-size: 0.5rem;
+		font-weight: lighter;
+		line-height: 1.6;
+		color: var(--purpleHaze);
+	}
+}
