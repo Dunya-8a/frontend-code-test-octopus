@@ -3,9 +3,9 @@ import styles from "./ProductSpecs.module.scss";
 
 const ProductSpecs = () => {
 	return (
-		<div classname={styles.ProductSpecs}>
-			<h2 classname={styles.ProductSpecs__subtitle}>Specifications</h2>
-			<div classname={styles.ProductSpecs__grid}>
+		<div className={styles.ProductSpecs}>
+			<h2 className={styles.ProductSpecs__subtitle}>Specifications</h2>
+			<div className={styles.ProductSpecs__grid}>
 				<div>Brand</div>
 				<div>Item weight</div>
 				<div>Dimensions</div>

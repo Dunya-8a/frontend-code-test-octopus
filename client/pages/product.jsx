@@ -5,7 +5,7 @@ import ProductAdder from "../components/ProductAdder/ProductAdder";
 import ProductDescription from "../components/ProductDescription/ProductDescription";
 import ProductSpecs from "../components/ProductSpecs/ProductSpecs";
 
-export default function Product() {
+const Product = () => {
 	return (
 		<>
 			<div className="product">
@@ -19,3 +19,5 @@ export default function Product() {
 		</>
 	);
 }
+
+export default Product;

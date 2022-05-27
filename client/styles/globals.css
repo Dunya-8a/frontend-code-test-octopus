@@ -8,6 +8,14 @@
 	--sohoLights: #f050f8;
 }
 
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html,
 body {
 	padding: 0;
@@ -17,6 +25,7 @@ body {
 }
 
 body {
+	width: 100%;
 	background: var(--siphon);
 }
 
@@ -30,5 +39,5 @@ body {
 }
 
 .product {
-	padding: 24px;
+	padding: 1rem;
 }
