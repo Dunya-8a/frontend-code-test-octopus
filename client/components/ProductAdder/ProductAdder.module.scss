@@ -1,0 +1,64 @@
+@use "../../styles/partials/breakpoints" as *;
+
+@mixin arithmetic-buttons {
+	width: 1.6rem;
+	height: 1.6rem;
+	font-weight: 600;
+	border: none;
+	border-radius: 8px;
+}
+
+.ProductAdder {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-end;
+
+	&__price,
+	&__counter {
+		font-size: 1.2rem;
+		font-weight: normal;
+	}
+
+	&__counter {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__label {
+		margin-bottom: 0.25rem;
+		font-size: 0.5rem;
+		color: var(--purpleHaze);
+	}
+
+	&__mathcontainer {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__minus {
+		@include arithmetic-buttons();
+		margin-right: 0.5rem;
+		color: var(--purpleHaze);
+		background-color: var(--plum);
+	}
+
+	&__plus {
+		@include arithmetic-buttons();
+		margin-left: 0.5rem;
+		color: var(--siphon);
+		background-color: var(--sohoLights);
+	}
+
+	&__adder {
+		width: 100%;
+		padding: 0.9rem;
+		margin: 1rem 0;
+		font-weight: 600;
+		color: var(--siphon);
+		background-color: var(--sohoLights);
+		border: none;
+		border-radius: 8px;
+	}
+}
