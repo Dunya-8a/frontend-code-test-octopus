@@ -1,4 +1,5 @@
 @use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixins" as *;
 
 @mixin arithmetic-buttons {
 	width: 1.6rem;
@@ -13,11 +14,12 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-end;
+	padding: $component-padding-mobile;
+	padding-top: 0;
 
 	&__price,
 	&__counter {
-		font-size: 1.2rem;
-		font-weight: normal;
+		@include subheader();
 	}
 
 	&__counter {
@@ -54,8 +56,7 @@
 	&__adder {
 		width: 100%;
 		padding: 0.9rem;
-		margin: 1rem 0;
-		font-weight: 600;
+		letter-spacing: 0.5px;
 		color: var(--siphon);
 		background-color: var(--sohoLights);
 		border: none;

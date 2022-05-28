@@ -8,7 +8,7 @@ const ProductSpecs = ({
 		<div className={styles.ProductSpecs}>
 			<h2 className={styles.ProductSpecs__subtitle}>Specifications</h2>
 			<table className={styles.ProductSpecs__table}>
-				<thead className={"styles.ProductSpecs__table-header"}>
+				<thead className={styles.ProductSpecs__theader}>
 					<tr>
 						<td>Specification</td>
 						<td>Value</td>

@@ -1,0 +1,9 @@
+/* Layout variables */
+$component-padding-mobile: 1rem;
+
+/* Mixins */
+@mixin subheader {
+	padding-bottom: 1rem;
+	font-size: 1.2rem;
+	font-weight: normal;
+}

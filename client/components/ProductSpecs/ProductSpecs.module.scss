@@ -1,0 +1,6 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixins" as *;
+
+.ProductsSpecs {
+	padding: $component-padding-mobile;
+}

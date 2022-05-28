@@ -1,7 +1,5 @@
 @use "./partials/breakpoints.scss" as *;
-
-/* Layout variables */
-$component-padding-mobile: 1rem;
+@use "./partials/mixins.scss" as *;
 
 /* Octopus Energy brand colours used in the design */
 :root {
@@ -34,6 +32,11 @@ body {
 	background: var(--siphon);
 }
 
+p {
+	font-size: 0.75rem;
+	line-height: 1.6;
+}
+
 .home {
 	display: flex;
 	flex-direction: column;
@@ -50,7 +53,6 @@ body {
 	min-height: 100vh;
 
 	header,
-	main,
 	footer {
 		padding: $component-padding-mobile;
 	}

@@ -1,8 +1,8 @@
 @use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixins" as *;
 
 .ProductMain {
-	padding-bottom: 2rem;
-
+	padding: $component-padding-mobile;
 	&__img {
 		aspect-ratio: 1 / 1;
 		width: 100%;
@@ -17,7 +17,6 @@
 	}
 
 	&__details {
-		font-size: 0.8rem;
 		color: var(--purpleHaze);
 	}
 }
