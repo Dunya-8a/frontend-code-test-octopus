@@ -1,6 +1,25 @@
 @use "../../styles/partials/breakpoints" as *;
 @use "../../styles/partials/mixins" as *;
 
-.ProductsSpecs {
+.ProductSpecs {
 	padding: $component-padding-mobile;
+
+	&__subtitle {
+		@include subheader();
+        padding-bottom: 0;
+	}
+
+	&__table {
+		width: 100%;
+		font-size: 0.65rem;
+		font-weight: lighter;
+
+		td {
+			padding-top: $component-padding-mobile;
+		}
+	}
+
+	&__col {
+		width: 50%;
+	}
 }

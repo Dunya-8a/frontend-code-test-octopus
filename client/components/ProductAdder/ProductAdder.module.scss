@@ -1,5 +1,5 @@
-@use "../../styles/partials/breakpoints" as *;
-@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/breakpoints.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
 
 @mixin arithmetic-buttons {
 	width: 1.6rem;
@@ -12,8 +12,8 @@
 .ProductAdder {
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
 	align-items: flex-end;
+	flex-wrap: wrap;
 	padding: $component-padding-mobile;
 	padding-top: 0;
 

@@ -8,12 +8,10 @@ const ProductSpecs = ({
 		<div className={styles.ProductSpecs}>
 			<h2 className={styles.ProductSpecs__subtitle}>Specifications</h2>
 			<table className={styles.ProductSpecs__table}>
-				<thead className={styles.ProductSpecs__theader}>
-					<tr>
-						<td>Specification</td>
-						<td>Value</td>
-					</tr>
-				</thead>
+				<colgroup>
+					<col className={styles.ProductSpecs__col} />
+					<col className={styles.ProductSpecs__col} />
+				</colgroup>
 				<tbody>
 					<tr>
 						<td>Brand</td>
