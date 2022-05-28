@@ -1,3 +1,8 @@
+@use "./partials/breakpoints.scss" as *;
+
+/* Layout variables */
+$component-padding-mobile: 1rem;
+
 /* Octopus Energy brand colours used in the design */
 :root {
 	--hemocyanin: #170048;
@@ -47,7 +52,7 @@ body {
 	header,
 	main,
 	footer {
-		padding: 1rem;
+		padding: $component-padding-mobile;
 	}
 
 	main {
