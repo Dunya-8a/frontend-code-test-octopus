@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import Cart from "../utils/Cart";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import ProductMain from "../components/ProductMain/ProductMain";
@@ -9,9 +10,6 @@ import ProductDescription from "../components/ProductDescription/ProductDescript
 import ProductSpecs from "../components/ProductSpecs/ProductSpecs";
 
 import { GET_ALL_PRODUCTS_API } from "../api/endpoints";
-// import cartState from "../utils/cart";
-
-// const cartContext = React.createContext()
 
 const Product = () => {
 	const [productData, setProductData] = useState([]);
@@ -32,21 +30,20 @@ const Product = () => {
 		fetchProductDetails();
 	}, []);
 
-	// console.log(productData);
-	// console.log(cartState)
-
 	return (
 		<>
-			<div className="product">
-				<Header />
-				<main>
-					<ProductMain product={productData} />
-					<ProductAdder id={productData.id} price={productData.price} />
-					<ProductDescription description={productData.description} />
-					<ProductSpecs product={productData} />
-				</main>
-				<Footer />
-			</div>
+			<Cart>
+				<div className="product">
+					<Header />
+					<main>
+						<ProductMain product={productData} />
+						<ProductAdder id={productData.id} price={productData.price} />
+						<ProductDescription description={productData.description} />
+						<ProductSpecs product={productData} />
+					</main>
+					<Footer />
+				</div>
+			</Cart>
 		</>
 	);
 };

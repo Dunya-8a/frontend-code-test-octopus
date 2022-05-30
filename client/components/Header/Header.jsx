@@ -1,11 +1,15 @@
-/* Reusable for other sites */
+/* Reusable for other pages */
 
 import React, { useContext } from "react";
 import styles from "./Header.module.scss";
 
-// const {cartCount} = useContext(CartContext)
+import CartContext from "../../context/CartContext";
 
 const Header = () => {
+	const currCart = useContext(CartContext);
+	// console.log(cartCount);
+	console.log(currCart);
+
 	return (
 		<>
 			<header className={styles.Header}>
@@ -14,6 +18,7 @@ const Header = () => {
 					src="/octopus-logo.svg"
 					alt="Octopus Energy logo"
 				/>
+				<p>{currCart.cartCount}</p>
 				<img
 					src="/basket.svg"
 					alt="Your basket"
