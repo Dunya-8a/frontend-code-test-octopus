@@ -1,7 +1,9 @@
 /* Reusable for other sites */
 
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Header.module.scss";
+
+// const {cartCount} = useContext(CartContext)
 
 const Header = () => {
 	return (

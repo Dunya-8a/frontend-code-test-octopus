@@ -9,8 +9,9 @@ import ProductDescription from "../components/ProductDescription/ProductDescript
 import ProductSpecs from "../components/ProductSpecs/ProductSpecs";
 
 import { GET_ALL_PRODUCTS_API } from "../api/endpoints";
+// import cartState from "../utils/cart";
 
-const CartContext = React.createContext()
+// const cartContext = React.createContext()
 
 const Product = () => {
 	const [productData, setProductData] = useState([]);
@@ -31,7 +32,8 @@ const Product = () => {
 		fetchProductDetails();
 	}, []);
 
-	console.log(productData);
+	// console.log(productData);
+	// console.log(cartState)
 
 	return (
 		<>
@@ -39,7 +41,7 @@ const Product = () => {
 				<Header />
 				<main>
 					<ProductMain product={productData} />
-					<ProductAdder price={productData.price} />
+					<ProductAdder id={productData.id} price={productData.price} />
 					<ProductDescription description={productData.description} />
 					<ProductSpecs product={productData} />
 				</main>
