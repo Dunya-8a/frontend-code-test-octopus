@@ -15,6 +15,10 @@ const ProductAdder = ({ price }) => {
 	// Click handler for plus button
 	const addQty = () => setQtyToAdd(qtyToAdd + 1);
 
+	// Clicker handler to submit qtyToAdd to cart
+	// Using Context API
+	
+
 	return (
 		<div className={styles.ProductAdder}>
 			{/* Convert price in pence into pounds */}

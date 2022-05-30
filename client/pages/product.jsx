@@ -10,6 +10,8 @@ import ProductSpecs from "../components/ProductSpecs/ProductSpecs";
 
 import { GET_ALL_PRODUCTS_API } from "../api/endpoints";
 
+const CartContext = React.createContext()
+
 const Product = () => {
 	const [productData, setProductData] = useState([]);
 
