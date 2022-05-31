@@ -1,0 +1,83 @@
+@use "../../styles/partials/breakpoints.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+@mixin arithmetic-buttons {
+	width: 1.6rem;
+	height: 1.6rem;
+	font-weight: 600;
+	border: none;
+	border-radius: 8px;
+}
+
+.ProductAdder {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	padding: $component-padding-mobile;
+	padding-top: 0;
+
+	&__price,
+	&__counter {
+		@include subheader();
+	}
+
+	&__counter {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__label {
+		margin-bottom: 0.25rem;
+		font-size: 0.5rem;
+		color: var(--purpleHaze);
+	}
+
+	&__mathcontainer {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__minus {
+		@include arithmetic-buttons();
+		margin-right: 0.5rem;
+		color: var(--purpleHaze);
+		background-color: var(--plum);
+	}
+
+	&__plus {
+		@include arithmetic-buttons();
+		margin-left: 0.5rem;
+		color: var(--siphon);
+		background-color: var(--sohoLights);
+	}
+
+	&__adder {
+		width: 100%;
+		padding: 0.9rem;
+		letter-spacing: 0.5px;
+		color: var(--siphon);
+		background-color: var(--sohoLights);
+		border: none;
+		border-radius: 8px;
+	}
+}
+
+@include desktop {
+	.ProductAdder {
+		align-items: center;
+		flex-wrap: nowrap;
+
+		&__price {
+			flex-grow: 1;
+			padding: 0;
+		}
+
+		&__adder {
+			flex-basis: 80%;
+			max-width: 25%;
+			margin-left: 1rem;
+		}
+	}
+}

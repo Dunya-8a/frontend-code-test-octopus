@@ -1,0 +1,15 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixins" as *;
+
+.ProductDescription {
+	padding: $component-padding-mobile;
+	background-color: var(--hemocyanin);
+
+	&__subtitle {
+		@include subheader();
+	}
+
+	&__text {
+		font-weight: lighter;
+	}
+}

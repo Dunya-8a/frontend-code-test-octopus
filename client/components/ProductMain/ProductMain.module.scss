@@ -1,0 +1,30 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixins" as *;
+
+.ProductMain {
+	padding: $component-padding-mobile;
+	&__img {
+		aspect-ratio: 1 / 1;
+		width: 100%;
+		border-radius: 5%;
+
+		@include tablet {
+			width: 50%;
+		}
+
+		@include desktop {
+			width: 25%;
+		}
+	}
+
+	&__title {
+		padding: 0.75rem 0 0.5rem;
+		font-size: 1.65rem;
+		font-weight: 100;
+		line-height: 1.5;
+	}
+
+	&__details {
+		color: var(--purpleHaze);
+	}
+}
