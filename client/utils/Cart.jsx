@@ -52,11 +52,12 @@ const Cart = ({ children }) => {
 	}
 
 	function getCartCount() {
-		const count = 0;
+		let count = 0;
 
 		// Add the quantities of all the products in the cart
 		const quantities = Object.values(cartState.cart);
-		quantities.forEach((value) => (count += value));
+		// Safety check in case the function is called without items in the cart (prevent undefined error)
+		quantities && quantities.forEach((value) => (count += value));
 
 		return count;
 	}
