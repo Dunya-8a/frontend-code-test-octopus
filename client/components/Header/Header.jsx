@@ -7,7 +7,6 @@ import CartContext from "../../context/CartContext";
 
 const Header = () => {
 	const currCart = useContext(CartContext);
-	console.log(currCart);
 
 	return (
 		<>

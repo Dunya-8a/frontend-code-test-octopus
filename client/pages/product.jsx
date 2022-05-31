@@ -32,6 +32,7 @@ const Product = () => {
 
 	return (
 		<>
+			{/* Cart provides global context for the shopping cart */}
 			<Cart>
 				<div className="product">
 					<Header />

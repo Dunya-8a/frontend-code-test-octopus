@@ -1,4 +1,4 @@
-/* Reusable for other sites */
+/* Reusable for other pages */
 
 import React from "react";
 import styles from "./Footer.module.scss";

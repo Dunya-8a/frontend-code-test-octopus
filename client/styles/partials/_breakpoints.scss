@@ -1,9 +1,9 @@
-/* width variables */
+/* Width variables */
 $mobile-max-width: 767px;
 $tablet-min-width: 768px;
 $desktop-min-width: 1280px;
 
-/* media queries */
+/* Media queries */
 @mixin mobile {
 	@media only screen and (max-width: $mobile-max-width) {
 		@content;

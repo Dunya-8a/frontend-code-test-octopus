@@ -9,25 +9,24 @@ const ProductAdder = ({ id, price }) => {
 	// Use Context API to share cart contents globally
 	const currCart = useContext(CartContext);
 
+	// Click handler to submit qtyToAdd to cart
+	const addToCart = () => currCart.addItem(id, qtyToAdd);
+
 	// Click handler for minus button
 	const subtractQty = () => {
 		// Do not allow zero or negative quantities
-		if (qtyToAdd > 1) {
-			setQtyToAdd(qtyToAdd - 1);
-		}
+		qtyToAdd > 1 && setQtyToAdd(qtyToAdd - 1);
 	};
 
 	// Click handler for plus button
 	const addQty = () => setQtyToAdd(qtyToAdd + 1);
 
-	// Click handler to submit qtyToAdd to cart
-	const addToCart = () => currCart.addItem(id, qtyToAdd);
-
 	return (
 		<div className={styles.ProductAdder}>
 			{/* Convert price in pence into pounds */}
 			<h2 className={styles.ProductAdder__price}>£{price / 100}</h2>
-			{/* Counter for the quantity to be added to cart */}
+
+			{/* Counter for the quantity to be added to the cart */}
 			<div className={styles.ProductAdder__counter}>
 				<label className={styles.ProductAdder__label}>Qty</label>
 				<div
