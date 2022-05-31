@@ -1,6 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
 import Product from "../pages/product";
-import ProductAdder from "../components/ProductAdder/ProductAdder"
+import ProductAdder from "../components/ProductAdder/ProductAdder";
 
 test("should be able to increase and decrease product quantity", async () => {
 	const { getByText, getByTitle } = render(<ProductAdder />);
@@ -26,14 +26,14 @@ test("should be able to add items to the basket", async () => {
 
 	const currentQuantity = getByTitle("Current quantity");
 
-  fireEvent.click(increaseQuantity);
-  fireEvent.click(increaseQuantity);
-  fireEvent.click(increaseQuantity);
+	fireEvent.click(increaseQuantity);
+	fireEvent.click(increaseQuantity);
+	fireEvent.click(increaseQuantity);
 
 	expect(currentQuantity).toHaveTextContent("4");
 
-  const addToBasketElement = getByText("Add to cart");
-  fireEvent.click(addToBasketElement);
+	const addToBasketElement = getByText("Add to cart");
+	fireEvent.click(addToBasketElement);
 
 	const basketItems = getByTitle("Basket items");
 	expect(basketItems).toHaveTextContent("4");
