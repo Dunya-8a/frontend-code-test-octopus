@@ -63,3 +63,21 @@
 		border-radius: 8px;
 	}
 }
+
+@include desktop {
+	.ProductAdder {
+		align-items: center;
+		flex-wrap: nowrap;
+
+		&__price {
+			flex-grow: 1;
+			padding: 0;
+		}
+
+		&__adder {
+			flex-basis: 80%;
+			max-width: 25%;
+			margin-left: 1rem;
+		}
+	}
+}

@@ -7,6 +7,14 @@
 		aspect-ratio: 1 / 1;
 		width: 100%;
 		border-radius: 5%;
+
+		@include tablet {
+			width: 50%;
+		}
+
+		@include desktop {
+			width: 25%;
+		}
 	}
 
 	&__title {
