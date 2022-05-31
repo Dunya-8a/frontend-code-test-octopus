@@ -7,7 +7,6 @@ import CartContext from "../../context/CartContext";
 
 const Header = () => {
 	const currCart = useContext(CartContext);
-	// console.log(cartCount);
 	console.log(currCart);
 
 	return (
@@ -18,12 +17,14 @@ const Header = () => {
 					src="/octopus-logo.svg"
 					alt="Octopus Energy logo"
 				/>
-				<p>{currCart.cartCount}</p>
-				<img
-					src="/basket.svg"
-					alt="Your basket"
-					className={styles.Header__basket}
-				/>
+				<div>
+					<img
+						src="/basket.svg"
+						alt="Your basket"
+						className={styles.Header__basket}
+					/>
+					<div className={styles.Header__basketcount}>{currCart.cartCount}</div>
+				</div>
 			</header>
 		</>
 	);
