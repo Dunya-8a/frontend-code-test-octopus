@@ -23,7 +23,9 @@ const Header = () => {
 						alt="Your basket"
 						className={styles.Header__basket}
 					/>
-					<div className={styles.Header__basketcount}>{currCart.cartCount}</div>
+					<div className={styles.Header__basketcount} title="Basket items">
+						{currCart.cartCount}
+					</div>
 				</div>
 			</header>
 		</>

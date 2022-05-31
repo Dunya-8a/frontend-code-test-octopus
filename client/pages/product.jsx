@@ -22,7 +22,7 @@ const Product = () => {
 				const products = res.data.data.allProducts[0].fields;
 				setProductData(products);
 			})
-			.catch(() => console.log("Error retrieving data from the server"));
+			.catch((err) => console.log("Error retrieving data from the server", err));
 	};
 
 	// Call the fetch function at the first render (only)

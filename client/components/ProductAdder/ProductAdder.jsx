@@ -30,7 +30,9 @@ const ProductAdder = ({ id, price }) => {
 			{/* Counter for the quantity to be added to cart */}
 			<div className={styles.ProductAdder__counter}>
 				<label className={styles.ProductAdder__label}>Qty</label>
-				<div className={styles.ProductAdder__mathcontainer}>
+				<div
+					title="Current quantity"
+					className={styles.ProductAdder__mathcontainer}>
 					<button onClick={subtractQty} className={styles.ProductAdder__minus}>
 						-
 					</button>
